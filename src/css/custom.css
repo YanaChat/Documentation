@@ -1,0 +1,150 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+:root {
+  --ifm-color-primary: #3578e5;
+  --ifm-color-primary-dark: #1d68e1;
+  --ifm-color-primary-darker: #1b62d4;
+  --ifm-color-primary-darkest: #1751af;
+  --ifm-color-primary-light: #4e89e8;
+  --ifm-color-primary-lighter: #5a91ea;
+  --ifm-color-primary-lightest: #80aaef;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: Roboto, sans-serif;
+  --ifm-h1-font-size: 2rem;
+  --ifm-h2-font-size: 1.5rem;
+  --ifm-h3-font-size: 1.25rem;
+  --ifm-h4-font-size: 1rem;
+  --ifm-h5-font-size: 0.875rem;
+  --ifm-h6-font-size: 0.85rem;
+  --ifm-font-family-headings: Roboto, 'Segoe UI';
+  --doc-sidebar-width: 290px !important;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar font size */
+.menu__link {
+  font-size: 87%;
+}
+
+/* Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Headings and Titles */
+h1, h2, h3, h4, h5, h6, .text-break {
+  word-wrap: break-word;
+  word-break: break-word;
+  font-family: var(--ifm-font-family-headings);
+}
+
+.liner {
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  border-bottom: 1pt solid #646464;
+}
+
+.liner.a {
+  color: rgb(156, 220, 254);
+}
+
+.badge--secondary {
+  background-color: var(--ifm-link-color);
+  border-color: var(--ifm-link-color);
+  color: white;
+}
+
+.blogPostTitle_3-lP {
+  font-size: 2rem !important;
+}
+
+.docTitle_cWlf {
+  font-size: 2rem !important;
+}
+
+h1 {
+  font-size: 2rem !important;
+}
+
+.markdown > h2 {
+  font-size: 1.5rem !important;
+}
+
+.markdown > h3 {
+  font-size: 1.25rem !important;
+}
+
+.markdown > h4 {
+  font-size: 1rem !important;
+}
+
+.footer {
+  --ifm-footer-background-color: #000000 !important;
+}
+
+/* Code Block and Inline changes */
+.docusaurus-highlight-code-line {
+  background-color: rgb(0, 0, 0);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.copyButton_2e3i, .copyButton, .copyButton_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock- {
+  background: rgba(0, 139, 178, 0.5);
+  border: none;
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-color-white);
+  cursor: pointer;
+  opacity: 0;
+  user-select: none;
+  padding: 0.4rem 0.5rem;
+  position: absolute;
+  right: calc(var(--ifm-pre-padding) / 2);
+  top: calc(var(--ifm-pre-padding) / 2);
+  transition: opacity 200ms ease-in-out;
+}
+
+html[data-theme='dark'] code {
+  background-color: #292D3E !important;
+}
+
+/* DETAILS SUMMARY for long code */
+
+details::marker {
+  color:rgb(38, 127, 153);
+}
+
+summary {
+  font-weight: bold;
+  color:rgb(38, 127, 153);
+  cursor: pointer;
+}
+
+/* Top Nav Version */
+
+.nav-break {
+  border-left: 1px solid rgb(156, 156, 156);
+}
+
+.version::before {
+  content: "v. ";
+}
+
+html[data-theme='dark'] .navbar {
+  --ifm-navbar-background-color: rgb(0, 0, 0) !important;
+  --ifm-navbar-link-color: rgb(255, 255, 255) !important;
+}
+
+.navbar__title:hover, .navbar__brand:hover {
+  color: #3578e5;
+}
+
+table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}

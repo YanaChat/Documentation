@@ -1,0 +1,101 @@
+# Organization Resource
+
+Organizations in Yana represent a group of users.
+
+:::warning
+Yana API is currently in development and is subject to change. The content of this page is not fixed and may change at any time.
+:::
+
+### Organization Object
+
+#### Organization Structure
+
+| Field                     | Type      | Description                                                                                                                               | API Version       |
+| :---                      | :---      | :---                                                                                                                                      | :---              |
+| id                        | snowflake | organization's id                                                                                                                         | Not implemented   |
+| name                      | string    | organization's name (2-100 characters, excluding trailing and leading whitespace)                                                         | Not implemented   |
+| icon                      | ?string   | organization's icon hash                                                                                                                  | Not implemented   |
+| owner                     | boolean   | true if the user is the owner of the organization                                                                                         | Not implemented   |
+| owner_id                  | snowflake | id of owner                                                                                                                               | Not implemented   |
+| description               | string    | organization's description (0-300 characters)                                                                                             | Not implemented   |
+| banner                    | ?string   | organization's banner hash                                                                                                                | Not implemented   |
+| approximate_member_count? | integer   | approximate number of members in this organization, returned from the `GET /organizations/{id}` endpoint when `with_counts` is `true`     | Not implemented   |
+
+#### Example Organization
+
+```json
+{
+}
+```
+
+### Organization Member Object
+
+#### Organization Member Structure
+
+| Field         | Type          | Description                                   |
+| :---          | :---          | :---                                          |
+| user          | user object   | the user this organization member represents  |
+
+
+#### Example Organization Member
+
+```json
+{
+}
+```
+
+### Create Organization
+
+**POST** `/organizations`
+
+Create a new organization. Returns a [organization](#organization-object) on success.
+
+#### JSON Params
+
+| Field         | Type          | Description                                   |
+| :---          | :---          | :---                                          |
+| name          | string        | name of the organization (2-100 characters)   |
+| icon?         | ?image data   | base64 128x128 image for the guild icon       |
+
+
+### Get Organization
+
+**GET** `/organizations/{organization.id}`
+
+Returns the [organization](#organization-object) object for the given id. If with_counts is set to true, this endpoint will also return approximate_member_count and approximate_presence_count for the organization.
+
+#### Query String Params
+
+| Field             | Type      | Description                                                                           | Required | Default |
+| :---              | :---      | :---                                                                                  | :---     | :---    |
+| with_counts?      | boolean   | when true, will return approximate member and presence counts for the organization    | false    | false   |
+
+#### Example Response
+
+```json
+{
+}
+```
+
+### Modify Organization
+
+**PATCH** `/organizations/{organization.id}`
+
+Modify a organization's settings. Requires the `MANAGE_ORGANIZATION` permission. Returns a [organization](#organization-object) object on success.
+
+#### JSON Params
+
+| Field         | Type          | Description                                                   |
+| :---          | :---          | :---                                                          |
+| name?         | string        | organization's name                                           |
+| icon?         | ?image data   | base64 1024x1024 png/jpeg/gif image                           |
+| owner_id?     | string        | user id to transfer organization ownership to (must be owner) |
+| description?  | string        | base64 16:9 png/jpeg image for the organization banner        |
+| banner?       | ?image data   | base64 1024x1024 png/jpeg/gif image                           |
+
+
+### Delete Organization
+
+**DELETE** `/organizations/{organization.id}`
+
+Delete a organization permanently. User must be owner. Returns `204 No Content` on success.
