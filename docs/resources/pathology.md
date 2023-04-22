@@ -59,4 +59,4 @@ Register a new pathology. Returns a [pathology](#pathology-object) on success.
 
 **GET** `/pathologies/{pathology.id}/organizations`
 
-Returns an array of [organization](#organization-object) objects for the given pathology id.
+Returns an array of [organization](/docs/resources/organization#organization-object) objects for the given pathology id.

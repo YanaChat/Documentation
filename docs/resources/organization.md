@@ -82,7 +82,7 @@ Returns the [organization](#organization-object) object for the given id. If wit
 
 **PATCH** `/organizations/{organization.id}`
 
-Modify a organization's settings. Requires the `MANAGE_ORGANIZATION` permission. Returns a [organization](#organization-object) object on success.
+Modify a organization's settings. Returns a [organization](#organization-object) object on success.
 
 #### JSON Params
 
