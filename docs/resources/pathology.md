@@ -53,3 +53,10 @@ Register a new pathology. Returns a [pathology](#pathology-object) on success.
 | Field             | Type      | Description                                   | API Version       |
 | :---              | :---      | :---                                          | :---              |
 | name              | string    | name of the pathology (2-100 characters)      | Not Implemented   |
+
+
+### Get Organizations by Pathology
+
+**GET** `/pathologies/{pathology.id}/organizations`
+
+Returns an array of [organization](#organization-object) objects for the given pathology id.
