@@ -31,6 +31,11 @@ module.exports = {
               "label": "Organization"
           },
           {
+            "type": "doc",
+            "id": "resources/invite",
+            "label": "Invite"
+          },
+          {
               "type": "doc",
               "id": "resources/user",
               "label": "User"

@@ -63,11 +63,11 @@ Modify the requester's user account settings. Returns a [user](#user-object) on 
 
 #### JSON Params
 
-| Field         | Type          | Description                           |
-| :---          | :---          | :---                                  |
-| username?     | string        | the user's username                   |
-| avatar?       | ?image data   | the user's avatar                     |
-| banner?       | ?image data   | the user's banner                     |
+| Field         | Type          | Description                           | API Version       |
+| :---          | :---          | :---                                  | :---              |
+| username?     | string        | the user's username                   | Not Implemented   |
+| avatar?       | ?image data   | the user's avatar                     | Not Implemented   |
+| banner?       | ?image data   | the user's banner                     | Not Implemented   |
 
 ### Get Current User Organizations
 
