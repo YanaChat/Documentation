@@ -69,6 +69,22 @@ It is useful to note that snowflake IDs are just numbers with a timestamp, so wh
 (timestamp_ms - YANA_EPOCH) << 22
 ````
 
+### Nullable and Optional Resource Fields
+
+Resource fields that may contain a `null` value have types that are prefixed with a question mark. Resource fields that are optional have names that are suffixed with a question mark.
+
+#### Example Nullable and Optional Fields
+
+| Field                         | Type      |
+| :---                          | :---      |
+| optional_field?               | string    |
+| nullable_field                | string?   |
+| optional_and_nullable_field?  | string?   |
+
+### Rate Limiting
+
+The HTTP API implements a process for limiting and preventing excessive requests. For more information on rate limiting of requests, please see the [Rate Limits](/docs/topics/rate-limits) section.
+
 ## Image Formatting
 
 #### Image Base URL
