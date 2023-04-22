@@ -26,19 +26,24 @@ module.exports = {
             "label": "Channel"
           },
           {
-              "type": "doc",
-              "id": "resources/organization",
-              "label": "Organization"
-          },
-          {
             "type": "doc",
             "id": "resources/invite",
             "label": "Invite"
           },
           {
               "type": "doc",
-              "id": "resources/user",
-              "label": "User"
+              "id": "resources/organization",
+              "label": "Organization"
+          },
+          {
+              "type": "doc",
+              "id": "resources/pathology",
+              "label": "Pathology"
+          },
+          {
+            "type": "doc",
+            "id": "resources/user",
+            "label": "User"
           },
       ],
     },
