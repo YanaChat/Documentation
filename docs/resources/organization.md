@@ -118,3 +118,28 @@ Create a new channel [channel](#channel-object) object for the organization. Ret
 | :---          | :---          | :---                                                                          | :---              | :---              |
 | name          | string        | name of the channel (2-100 characters)                                        | All               | Not implemented   |
 | type          | integer       | the [type](/docs/resources/channel#channel-types) of channel                  | All               | Not implemented   |
+
+### Get Organization Member
+
+**GET** `/organizations/{organization.id}/members/{user.id}`
+
+Returns a [organization member](#organization-member-object) object for the given user.
+
+### List Organization Members
+
+**GET** `/organizations/{organization.id}/members`
+
+Returns a list of [organization member](#organization-member-object) objects that are members of the organization.
+
+#### Query String Params
+
+| Field             | Type      | Description                                                                           | Default |
+| :---              | :---      | :---                                                                                  | :---    |
+| limit?            | integer   | max number of members to return (1-1000)                                              | 1       |
+| after?            | snowflake | the highest user id in the previous page                                              | 0       |
+
+### Remove Organization Member
+
+**DELETE** `/organizations/{organization.id}/members/{user.id}`
+
+Remove a member from a organization. Returns a 204 empty response on success.
