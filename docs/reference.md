@@ -58,6 +58,17 @@ Yana utilizes Twitter's [snowflake](https://github.com/twitter/snowflake/tree/sn
 | Internal process ID   | 16 to 12  | 5 bits            |                                                                               | (snowflake & 0x1F000) >> 12       |
 | Increment             | 11 to 0   | 12 bits           | For every ID that is generated on that process, this number is incremented    | snowflake & 0xFFF                 |
 
+### Snowflake IDs in Pagination
+
+We typically use snowflake IDs in many of our API routes for pagination. The standardized pagination paradigm we utilize is one in which you can specify IDs `before` and `after` in combination with `limit` to retrieve a desired page of results. You will want to refer to the specific endpoint documentation for details.
+
+It is useful to note that snowflake IDs are just numbers with a timestamp, so when dealing with pagination where you want results from the beginning of time (in Yana Epoch, but `0` works here too) or before/after a specific time you can generate a snowflake ID for that time.
+
+#### Generating a snowflake ID from a Timestamp Example
+````
+(timestamp_ms - YANA_EPOCH) << 22
+````
+
 ## Image Formatting
 
 #### Image Base URL
