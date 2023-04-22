@@ -99,3 +99,22 @@ Modify a organization's settings. Requires the `MANAGE_ORGANIZATION` permission.
 **DELETE** `/organizations/{organization.id}`
 
 Delete a organization permanently. User must be owner. Returns `204 No Content` on success.
+
+### Get Organization Channels
+
+**GET** `/organizations/{organization.id}/channels`
+
+Returns a list of [channel](#channel-object) objects.
+
+### Create Organization Channel
+
+**POST** `/organizations/{organization.id}/channels`
+
+Create a new channel [channel](#channel-object) object for the organization. Returns the new [channel](#channel-object) object on success.
+
+#### JSON Params
+
+| Field         | Type          | Description                                                                   | Channel Type      | API Version       |
+| :---          | :---          | :---                                                                          | :---              | :---              |
+| name          | string        | name of the channel (2-100 characters)                                        | All               | Not implemented   |
+| type          | integer       | the [type](/docs/resources/channel#channel-types) of channel                  | All               | Not implemented   |

@@ -41,8 +41,6 @@ Yana enforces the following restrictions for usernames:
 | Value | Name  | Description    |
 | :---  | :---  | :---           |
 
-
-
 ### Get Current User
 
 **GET** `/users/@me`
