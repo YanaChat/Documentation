@@ -38,8 +38,10 @@ Yana enforces the following restrictions for usernames:
 
 #### User Flags
 
-| Value | Name  | Description    |
-| :---  | :---  | :---           |
+| Value  | Name             | Description       |
+| :---   | :---             | :---              |
+| 1 << 0 | STAFF            | Yana Employee     |
+| 1 << 1 | CERTIFIED_DOCTOR | Certified Doctor  |
 
 ### Get Current User
 
