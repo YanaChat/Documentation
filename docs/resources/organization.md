@@ -18,6 +18,7 @@ Yana API is currently in development and is subject to change. The content of th
 | owner                     | boolean   | true if the user is the owner of the organization                                                                                             | Not implemented   |
 | owner_id                  | snowflake | id of owner                                                                                                                                   | Not implemented   |
 | description               | string    | organization's description (0-300 characters)                                                                                                 | Not implemented   |
+| pathology_id              | snowflake | id of the pathology the organization is in                                                                                                    | Not implemented   |
 | banner                    | ?string   | organization's banner hash                                                                                                                    | Not implemented   |
 | home_channel_id           | snowflake | default channel for the organization                                                                                                          | Not implemented   |
 | approximate_member_count? | integer   | approximate number of total members in this organization, returned from the `GET /organizations/{id}` endpoint when `with_counts` is `true`   | Not implemented   |
@@ -56,8 +57,7 @@ Create a new organization. Returns a [organization](#organization-object) on suc
 | Field         | Type          | Description                                   | API Version       |
 | :---          | :---          | :---                                          | :---              |
 | name          | string        | name of the organization (2-100 characters)   | Not implemented   |
-| icon?         | ?image data   | base64 128x128 image for the guild icon       | Not implemented   |
-
+| pathology_id  | snowflake     | id of the pathology the organization is in    | Not implemented   |
 
 ### Get Organization
 
