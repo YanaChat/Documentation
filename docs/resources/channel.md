@@ -77,7 +77,7 @@ Update a channel's settings. Returns a [channel](#channel-object) on success and
 
 | Field             | Type      | Description                                   | API Version       |
 | :---              | :---      | :---                                          | :---              |
-| name              | string    | name of the channel (2-100 characters)        | Not Implemented   |
+| name?             | string    | name of the channel (2-100 characters)        | Not Implemented   |
 
 ### Delete/Close Channel
 
