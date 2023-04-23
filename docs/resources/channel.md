@@ -32,21 +32,14 @@ Represents a organization channel within Yana.
 
 #### Example Channel
 
-<Tabs
-    defaultValue="0.0.0.1"
-    values={[
-        { label: 'V 0.0.0.1', value: '0.0.0.1', },
-    ]}
-    >
-    <TabItem value="0.0.0.1">
-        <CodeBlock className="language-json">{JSON.stringify({
+```json
+{
     "id": "41771983423143937",
     "organization_id": "41771983423143938",
     "name": "My Channel",
     "type": "1"
-    }, null, 2)}</CodeBlock>
-  </TabItem>
-</Tabs>
+}
+```
 
 ### Message Object
 
@@ -64,14 +57,8 @@ Represents a message sent in a channel within Yana.
 
 #### Example Message Structure
 
-<Tabs
-    defaultValue="0.0.0.1"
-    values={[
-        { label: 'V 0.0.0.1', value: '0.0.0.1', },
-    ]}
-    >
-    <TabItem value="0.0.0.1">
-        <CodeBlock className="language-json">{JSON.stringify({
+```json
+{
     "id": "41771983423143939",
     "channel_id": "41771983423143937",
     "author": {
@@ -85,9 +72,8 @@ Represents a message sent in a channel within Yana.
     },
     "content": "Message Content",
     "timestamp": "1672531200000"
-    }, null, 2)}</CodeBlock>
-  </TabItem>
-</Tabs>
+}
+```
 
 ### Post Message Object
 
@@ -106,31 +92,24 @@ Represents a post message sent in a channel within Yana.
 
 #### Example Post Message
 
-<Tabs
-    defaultValue="0.0.0.1"
-    values={[
-        { label: 'V 0.0.0.1', value: '0.0.0.1', },
-    ]}
-    >
-    <TabItem value="0.0.0.1">
-        <CodeBlock className="language-json">{JSON.stringify({
-                "id": "41771983423143939",
-                "channel_id": "41771983423143937",
-                "author": {
-                    "id": "41771983423143940",
-                    "username": "kap35",
-                    "avatar": "image_content",
-                    "email": "my_email@email.com",
-                    "mfa_enabled": false,
-                    "banner": "image_content",
-                    "flags": [],
-                },
-                "title": "Post Title",
-                "content": "Message Content",
-                "timestamp": "1672531200000"
-            }, null, 2)}</CodeBlock>
-  </TabItem>
-</Tabs>
+```json
+{
+    "id": "41771983423143939",
+    "channel_id": "41771983423143937",
+    "author": {
+        "id": "41771983423143940",
+        "username": "kap35",
+        "avatar": "image_content",
+        "email": "my_email@email.com",
+        "mfa_enabled": false,
+        "banner": "image_content",
+        "flags": [],
+    },
+    "title": "Post Title",
+    "content": "Message Content",
+    "timestamp": "1672531200000"
+}
+```
 
 ### Get Channel
 
