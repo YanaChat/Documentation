@@ -21,8 +21,8 @@ Represents code that when used, adds a user to a pathology in Yana to access org
 ```json
 {
     "code": "abcdef",
-    "pathology_id": "41771983423143938",
-    "expires_at": "1672531200000",
+    "pathology_id": 41771983423143938,
+    "expires_at": 1672531200000,
 }
 ```
 

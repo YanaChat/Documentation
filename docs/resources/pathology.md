@@ -19,7 +19,7 @@ Yana API is currently in development and is subject to change. The content of th
 
 ```json
 {
-    "id": "41771983423143940",
+    "id": 41771983423143940,
     "name": "Pathology name",
 }
 ```

@@ -33,13 +33,13 @@ Yana enforces the following restrictions for usernames:
 
 ```json
 {
-    "id": "41771983423143940",
+    "id": 41771983423143940,
     "username": "kap35",
     "avatar": "image_content",
     "email": "my_email@email.com",
     "mfa_enabled": false,
     "banner": "image_content",
-    "flags": [],
+    "flags": 0,
 }
 ```
 

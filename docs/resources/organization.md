@@ -27,15 +27,15 @@ Yana API is currently in development and is subject to change. The content of th
 
 ```json
 {
-    "id": "41771983423143945",
+    "id": 41771983423143945,
     "name": "Organization name",
     "description": "Organization description",
     "icon": "image_data",
     "banner": "image_data",
     "owner": true,
-    "owner_id": "41771983423143939",
-    "home_channel_id": "41771983423143938",
-    "pathology_id": "41771983423143938",
+    "owner_id": 41771983423143939,
+    "home_channel_id": 41771983423143938,
+    "pathology_id": 41771983423143938,
     "approximate_member_count": 100,
 }
 ```
@@ -54,13 +54,13 @@ Yana API is currently in development and is subject to change. The content of th
 ```json
 {
     "user": {
-        "id": "41771983423143940",
+        "id": 41771983423143940,
         "username": "kap35",
         "avatar": "image_content",
         "email": "my_email@email.com",
         "mfa_enabled": false,
         "banner": "image_content",
-        "flags": [],
+        "flags": 0,
     }
 }
 ```

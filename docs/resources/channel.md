@@ -34,10 +34,10 @@ Represents a organization channel within Yana.
 
 ```json
 {
-    "id": "41771983423143937",
-    "organization_id": "41771983423143938",
+    "id": 41771983423143937,
+    "organization_id": 41771983423143938,
     "name": "My Channel",
-    "type": "1"
+    "type": 1
 }
 ```
 
@@ -59,19 +59,19 @@ Represents a message sent in a channel within Yana.
 
 ```json
 {
-    "id": "41771983423143939",
-    "channel_id": "41771983423143937",
+    "id": 41771983423143939,
+    "channel_id": 41771983423143937,
     "author": {
-        "id": "41771983423143940",
+        "id": 41771983423143940,
         "username": "kap35",
         "avatar": "image_content",
         "email": "my_email@email.com",
         "mfa_enabled": false,
         "banner": "image_content",
-        "flags": [],
+        "flags": 0,
     },
     "content": "Message Content",
-    "timestamp": "1672531200000"
+    "timestamp": 1672531200000
 }
 ```
 
@@ -94,20 +94,20 @@ Represents a post message sent in a channel within Yana.
 
 ```json
 {
-    "id": "41771983423143939",
-    "channel_id": "41771983423143937",
+    "id": 41771983423143939,
+    "channel_id": 41771983423143937,
     "author": {
-        "id": "41771983423143940",
+        "id": 41771983423143940,
         "username": "kap35",
         "avatar": "image_content",
         "email": "my_email@email.com",
         "mfa_enabled": false,
         "banner": "image_content",
-        "flags": [],
+        "flags": 0,
     },
     "title": "Post Title",
     "content": "Message Content",
-    "timestamp": "1672531200000"
+    "timestamp": 1672531200000
 }
 ```
 
