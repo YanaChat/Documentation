@@ -82,6 +82,7 @@ import TabItem from '@theme/TabItem';
     <h3>Responses</h3>
     <p>403<span> - </span> bad email or password or username</p>
     <p>404<span> - </span> user with those credentials not found</p>
+    <p>423<span> - </span> too many connection tried. Please contact YANA for more information.</p>
     <p>449<span> - </span> missing one or more fields in body</p>
   </TabItem>
 </Tabs>
