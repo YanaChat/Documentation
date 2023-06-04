@@ -74,5 +74,22 @@ module.exports = {
           },
       ],
     },
+    {
+      "collapsed": true,
+      "type": "category",
+      "label": "Routes",
+      "items": [
+          {
+              "type": "doc",
+              "label": "Auth",
+              "id": "routes/auth",
+          },
+          {
+              "type": "doc",
+              "label": "User",
+              "id": "routes/user",
+          },
+      ],
+    },
   ],
 };

@@ -148,3 +148,68 @@ table {
 .center {
   text-align: center;
 }
+
+html[data-theme='dark'] .route_summary {
+  color: white;
+  margin-bottom: 0 !important;
+  display: inline-flex;
+}
+
+html[data-theme='light'] .route_summary {
+  color: black;
+  margin-bottom: 0 !important;
+  display: inline-flex;
+}
+
+.route_summary p {
+  margin-bottom: 0;
+}
+
+.badge-post {
+  border-radius: 1rem;
+  background-color: rgb(219, 242, 187);
+  color: rgb(38, 132, 3) !important;
+  padding: 5px;
+  width: min-content;
+  height: min-content;
+  font-size: x-small;
+  margin-right: 5px;
+  margin-bottom: 0 !important;
+}
+
+.badge-get {
+  border-radius: 1rem;
+  background-color: rgb(190, 241, 255);
+  font-weight: bold;
+  color: rgb(77, 85, 146) !important;
+  padding: 5px;
+  width: min-content;
+  height: min-content;
+  font-size: x-small;
+  margin-right: 5px;
+  margin-bottom: 0 !important;
+}
+
+.badge-put {
+  border-radius: 1rem;
+  background-color: rgb(254, 234, 134);
+  color: rgb(139, 97, 17) !important;
+  padding: 5px;
+  width: min-content;
+  height: min-content;
+  font-size: x-small;
+  margin-right: 5px;
+  margin-bottom: 0 !important;
+}
+
+.badge-delete {
+  border-radius: 1rem;
+  background-color: rgb(255, 210, 221);
+  color: rgb(193, 27, 27) !important;
+  padding: 5px;
+  width: min-content;
+  height: min-content;
+  font-size: x-small;
+  margin-right: 5px;
+  margin-bottom: 0 !important;
+}
