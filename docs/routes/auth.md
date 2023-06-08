@@ -144,9 +144,7 @@ import TabItem from '@theme/TabItem';
   </TabItem>
   <TabItem value="error">
     <h3>Responses</h3>
-    <p>400<span> - </span> missing the password</p>
-    <p>403<span> - </span> bad password</p>
-    <p>405<span> - </span> higher role doesn't requested</p>
+    <p>400<span> - </span> need to login</p>
   </TabItem>
 </Tabs>
   </div>
