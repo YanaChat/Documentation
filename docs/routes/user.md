@@ -5,7 +5,7 @@ import TabItem from '@theme/TabItem';
 ### User Routes
 
 <details>
-  <summary className="route_summary"><p className="badge-get">GET</p><p>/user/&#123;id&#125;</p></summary>
+  <summary className="route_summary"><p className="badge-get">GET</p><p>/users/&#123;id&#125;</p></summary>
   <div>
     <div>Get information about an account</div>
     <br/>
