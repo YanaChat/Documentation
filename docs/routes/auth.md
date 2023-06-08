@@ -34,6 +34,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="error">
     <h3>Responses</h3>
     <p>400<span> - </span> missing one or more fields in body</p>
+    <p>401<span> - </span> email not checked</p>
     <p>403<span> - </span> bad email or password or username</p>
     <p>409<span> - </span> email or username already exists</p>
   </TabItem>
@@ -145,6 +146,77 @@ import TabItem from '@theme/TabItem';
   <TabItem value="error">
     <h3>Responses</h3>
     <p>400<span> - </span> need to login</p>
+  </TabItem>
+</Tabs>
+  </div>
+</details>
+
+<details>
+  <summary className="route_summary"><p className="badge-post">POST</p><p>/auth/email-check/request</p></summary>
+  <div>
+    <div>Send code to check your email before register</div>
+    <br/>
+    <h3>Request Authorization</h3>
+    <p>No token needed</p>
+    <h3>Request body</h3>
+    <div>
+
+      {
+        "email": "my-email@email.com"
+      }
+
+  </div>
+  <Tabs
+  defaultValue="result"
+  values={[
+    {label: 'Result', value: 'result'},
+    {label: 'Error', value: 'error'}
+  ]}>
+  <TabItem value="result">
+    <h3>Response</h3>
+    <p>204<span> - </span> no content</p>
+  </TabItem>
+  <TabItem value="error">
+    <h3>Responses</h3>
+    <p>400<span> - </span> missing credentials</p>
+    <p>500<span> - </span> error while executing route (ex: failed to send email)</p>
+  </TabItem>
+</Tabs>
+  </div>
+</details>
+
+
+<details>
+  <summary className="route_summary"><p className="badge-post">POST</p><p>/auth/email-check/confirm</p></summary>
+  <div>
+    <div>Verify email and code you entered before register</div>
+    <br/>
+    <h3>Request Authorization</h3>
+    <p>No token needed</p>
+    <h3>Request body</h3>
+    <div>
+
+      {
+        "email": "my-email@email.com",
+        "code": "0000000"
+      }
+
+  </div>
+  <Tabs
+  defaultValue="result"
+  values={[
+    {label: 'Result', value: 'result'},
+    {label: 'Error', value: 'error'}
+  ]}>
+  <TabItem value="result">
+    <h3>Response</h3>
+    <p>204<span> - </span> no content</p>
+  </TabItem>
+  <TabItem value="error">
+    <h3>Responses</h3>
+    <p>400<span> - </span> missing credentials</p>
+    <p>401<span> - </span> email never tried</p>
+    <p>403<span> - </span> bad code entered</p>
   </TabItem>
 </Tabs>
   </div>
