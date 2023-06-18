@@ -66,7 +66,7 @@ import TabItem from '@theme/TabItem';
   ]}>
   <TabItem value="result">
     <h3>Response</h3>
-    <p>203<span> - </span> no content</p>
+    <p>204<span> - </span> no content</p>
   </TabItem>
   <TabItem value="error">
     <h3>Responses</h3>
@@ -103,7 +103,7 @@ import TabItem from '@theme/TabItem';
   ]}>
   <TabItem value="result">
     <h3>Response</h3>
-    <p>203<span> - </span> no content</p>
+    <p>204<span> - </span> no content</p>
   </TabItem>
   <TabItem value="error">
     <h3>Responses</h3>
