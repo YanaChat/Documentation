@@ -213,3 +213,24 @@ html[data-theme='light'] .route_summary {
   margin-right: 5px;
   margin-bottom: 0 !important;
 }
+
+.badge-patch {
+  border-radius: 1rem;
+  background-color: rgb(255, 210, 221);
+  color: rgb(188, 27, 193) !important;
+  padding: 5px;
+  width: min-content;
+  height: min-content;
+  font-size: x-small;
+  margin-right: 5px;
+  margin-bottom: 0 !important;
+}
+
+p.token-needed {
+  background-color: pink;
+  border: 1px solid red;
+  border-radius: 10px;
+  padding: 5px;
+  margin-left: 10px;
+  color: black;
+}

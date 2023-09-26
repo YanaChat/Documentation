@@ -86,8 +86,18 @@ module.exports = {
           },
           {
               "type": "doc",
-              "label": "User",
+              "label": "Users",
               "id": "routes/user",
+          },
+          {
+            "type": "doc",
+            "label": "Organizations",
+            "id": "routes/organization",
+          },
+          {
+            "type": "doc",
+            "label": "Pathologies",
+            "id": "routes/pathology",
           },
       ],
     },

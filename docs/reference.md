@@ -30,12 +30,14 @@ When the API version is marked as `Unavailable` or `Discontinued`, it is no long
 
 Yana uses OAuth2 to authenticate requests. You can read more about it here.
 
-Authentication is performed with the `Authorization` HTTP header in the format `Authorization: TOKEN_TYPE TOKEN`.
+Authentication is performed with the HTTP header in the format `TOKEN_TYPE TOKEN`.
+
+/!\ Important /!\ The authentication is not in Authorization part of header.
 
 #### Example Bearer Token Authorization Header
 
 ```
-Authorization: Bearer CZhtkLDpNYXgPH9Ml6shqh2OwykChw
+Header: Bearer CZhtkLDpNYXgPH9Ml6shqh2OwykChw
 ```
 
 ## Snowflakes
