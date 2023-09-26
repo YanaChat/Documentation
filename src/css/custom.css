@@ -216,7 +216,7 @@ html[data-theme='light'] .route_summary {
 
 .badge-patch {
   border-radius: 1rem;
-  background-color: rgb(255, 210, 221);
+  background-color: rgb(234, 175, 255);
   color: rgb(188, 27, 193) !important;
   padding: 5px;
   width: min-content;
