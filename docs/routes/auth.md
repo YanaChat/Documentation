@@ -68,8 +68,7 @@ import TabItem from '@theme/TabItem';
 
         {
             "email": "my.email@email.com",
-            "password": "my password",
-            "mfa-code": "double auth code if needed"
+            "password": "my password"
         }
 
   </div>
@@ -86,10 +85,11 @@ import TabItem from '@theme/TabItem';
     <div>
 
     {
-        "token": "your token",
+        "session": "your token",
         "email": "my.email@email.com",
         "username": "my username",
-        "id": "00000000000000"
+        "id": "00000000000000",
+        "mfaEnabled": false
     }
 
   </div>
@@ -98,7 +98,56 @@ import TabItem from '@theme/TabItem';
     <h3>Responses</h3>
     <p>400<span> - </span> Missing 1 or more credentials</p>
     <p>401<span> - </span> bad email or password or username</p>
-    <p>422<span> - </span> double auth activated, please resend request with double auth code.</p>
+  </TabItem>
+</Tabs>
+  </div>
+</details>
+
+<!--
+    confirm MFA
+-->
+
+<details>
+  <summary className="route_summary"><p className="badge-post">POST</p><p>/auth/confirm-mfa</p></summary>
+  <div>
+    <div>Get session with 2FA</div>
+    <br/>
+    <h3>Request Header</h3>
+    <p class="token-needed">Bearer TOKEN</p>
+    <h3>Request body</h3>
+    <div>
+
+        {
+            "code": "my mfa code"
+        }
+
+  </div>
+  <Tabs
+  defaultValue="result"
+  values={[
+    {label: 'Result', value: 'result'},
+    {label: 'Error', value: 'error'}
+  ]}>
+  <TabItem value="result">
+    <h3>Response</h3>
+    <p>200<span> - </span> with content</p>
+    <h5>Body returned</h5>
+    <div>
+
+    {
+        "session": "new token with mfa validated",
+        "email": "my.email@email.com",
+        "username": "my username",
+        "id": "00000000000000",
+        "mfaEnabled": true
+    }
+
+  </div>
+  </TabItem>
+  <TabItem value="error">
+    <h3>Responses</h3>
+    <p>400<span> - </span> Missing 1 or more credentials</p>
+    <p>401<span> - </span> Have to connect or bad mfa code</p>
   </TabItem>
 </Tabs>
   </div>
