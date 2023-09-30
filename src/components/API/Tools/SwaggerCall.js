@@ -97,7 +97,7 @@ export default function SwaggerCall({
     return (
         <details className="custom-swagger-route">
             <summary className="route_summary"><p
-                className={ callType === "PUT" ? "badge-put" : callType === "POST" ? "badge-post" : callType === "PATCH" ? "badge-patch" : "badge-get" }
+                className={ callType === "PUT" ? "badge-put" : callType === "POST" ? "badge-post" : callType === "PATCH" ? "badge-patch" : callType === "DELETE" ? "badge-delete" : "badge-get" }
             >
                 { callType }</p><p>{mainUrl}<span className="route-path-custom">{pathUrl}</span></p>
                 <br/>
