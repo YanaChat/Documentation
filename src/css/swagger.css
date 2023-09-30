@@ -1,0 +1,283 @@
+.custom-swagger-route {
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+html[data-theme='dark'] .custom-swagger-route .route_summary {
+    color: white;
+    margin-bottom: 0 !important;
+    display: flex;
+    flex-wrap: wrap
+}
+  
+html[data-theme='light'] .custom-swagger-route .route_summary {
+    color: black;
+    margin-bottom: 0 !important;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.custom-swagger-route .custom-swagger-route-description {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.custom-swagger-route .route_summary::before {
+    content: '► ';
+    margin-right: 5px;
+}
+
+.custom-swagger-route[open] .route_summary::before {
+    content: "▼ ";
+    margin-right: 5px;
+}
+
+.custom-swagger-route .route_summary p {
+    font-weight: normal;
+}
+
+.custom-swagger-route .route-path-custom {
+    font-weight: bolder;
+}
+
+.custom-swagger-route .route_summary .badge-post {
+    border-radius: 5px;
+    background-color: rgb(219, 242, 187);
+    color: rgb(38, 132, 3) !important;
+    padding: 5px;
+    width: min-content;
+    height: min-content;
+    font-size: small;
+    margin-right: 5px;
+    margin-bottom: 0 !important;
+    font-weight: bolder;
+}
+  
+.custom-swagger-route .route_summary .badge-get {
+    border-radius: 5px;
+    background-color: rgb(190, 241, 255);
+    font-weight: bold;
+    color: rgb(77, 85, 146) !important;
+    padding: 5px;
+    width: min-content;
+    height: min-content;
+    font-size: small;
+    margin-right: 5px;
+    margin-bottom: 0 !important;
+    font-weight: bolder;
+}
+  
+.custom-swagger-route .route_summary .badge-put {
+    border-radius: 5px;
+    background-color: rgb(254, 234, 134);
+    color: rgb(139, 97, 17) !important;
+    padding: 5px;
+    width: min-content;
+    height: min-content;
+    font-size: small;
+    margin-right: 5px;
+    margin-bottom: 0 !important;
+    font-weight: bolder;
+}
+  
+.custom-swagger-route .route_summary .badge-delete {
+    border-radius: 5px;
+    background-color: rgb(255, 210, 221);
+    color: rgb(193, 27, 27) !important;
+    padding: 5px;
+    width: min-content;
+    height: min-content;
+    font-size: small;
+    margin-right: 5px;
+    margin-bottom: 0 !important;
+    font-weight: bolder;
+}
+  
+.custom-swagger-route .route_summary .badge-patch {
+    border-radius: 5px;
+    background-color: rgb(234, 175, 255);
+    color: rgb(188, 27, 193) !important;
+    padding: 5px;
+    width: min-content;
+    height: min-content;
+    font-size: small;
+    margin-right: 5px;
+    margin-bottom: 0 !important;
+    font-weight: bolder;
+}
+
+/*
+    PARAMETERS
+*/
+
+.custom-swagger-route-parameters {
+
+}
+
+.custom-swagger-route-parameters .table-parameter {
+    width: 95%;
+    margin-left: 5%;
+    border-collapse: collapse;
+}
+
+.custom-swagger-route-parameters .table-parameter .parameter-line {
+    border: 1px solid grey;
+    border-top: 1px solid;
+    border-style: hidden;
+    border-collapse: collapse;
+    border-bottom: 1px solid grey !important;
+}
+
+html[data-theme='light'] .custom-swagger-route-parameters .table-parameter td {
+    border-bottom: 1px solid grey;
+}
+
+html[data-theme='dark'] .custom-swagger-route-parameters .table-parameter td {
+    border-bottom: 1px solid #606770;
+}
+
+.required::before {
+    content: '*';
+    color: red;
+    font-variant-position: super;
+    margin-right: 5px;
+}
+
+.explanation {
+    color: gray;
+    font-size: x-small;
+}
+
+/*
+    RESPONSE
+*/
+
+.swagger-response {
+    width: 95%;
+    margin-left: 5%;
+    padding: 0;
+    position: relative;
+}
+
+.swagger-response .swagger-response-summary {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style: none;
+    border-top: 1px solid;
+    color: white;
+}
+
+html[data-theme='light'] .swagger-response .swagger-response-summary {
+    color: black;
+}
+
+.swagger-response .swagger-response-summary table {
+    border-style: hidden;
+    border-collapse: collapse;
+    border: none;
+}
+
+.swagger-response .swagger-response-summary table td {
+    border-style: hidden;
+}
+
+.swagger-response .swagger-response-summary table tr {
+    border: none;
+}
+
+.swagger-response .swagger-response-summary table td.description {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    color: gray;
+    font-weight: lighter;
+}
+
+.swagger-response.no-content {
+    pointer-events: none;
+}
+
+.swagger-response.have-content .swagger-response-summary table td.description::after {
+    content: ' ►';
+}
+
+.swagger-response[open].have-content .swagger-response-summary table td.description::after {
+    content: " ▼";
+}
+
+.swagger-response .swagger-response-summary  table td.code {
+    width: 30%;
+}
+
+.swagger-response .swagger-response-summary  table td.code::before {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.swagger-response .swagger-response-summary  table td.code.status-good::before {
+    color: green;
+}
+
+.swagger-response .swagger-response-summary  table td.code.status-rediection::before {
+    color: blue;
+}
+
+.swagger-response .swagger-response-summary  table td.code.status-error::before {
+    color: red;
+}
+
+.swagger-response .swagger-response-summary  table td.code.status-internal-error::before {
+    color: yellow;
+}
+
+.swagger-response .swagger-response-summary  table td.code.status-unknown::before {
+    color: gray;
+}
+
+.swagger-response .swagger-response-summary:hover {
+    cursor: pointer;
+}
+
+.swagger-response .swagger-response-summary .no-content {
+    pointer-events: none;
+}
+
+.swagger-response .swagger-response-summary .swagger-response-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.swagger-response-content .warning {
+    width: fit-content;
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+html[data-theme='light'] .swagger-response-content .warning {
+    color: black;
+}
+
+.swagger-response-content .warning::before {
+    content: "WARNING  ";
+    font-weight: bolder;
+    color: red;
+}
+
+table tbody td.name {
+    width: 20.87%;
+}
+
+table tbody td.type {
+    width: 13.57%;
+}
