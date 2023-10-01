@@ -1,4 +1,5 @@
 import React from 'react';
+import WarningIcon from "../../WarningIcon/WarningIcon.js"
 
 export function SwaggerResponse__200_meaning({status_code}) {
     let value = "OK";
@@ -262,7 +263,7 @@ export function SwaggerResponseMeaning({status_code}) {
                 status_code={status_code}
             />
         );
-    return (<p></p>);
+    return (<p>{status_code}: unknown</p>);
 }
 
 export function SwaggerResponseContent({
@@ -272,6 +273,16 @@ export function SwaggerResponseContent({
         <div>
             <pre> { JSON.stringify(json_content, null, 2) } </pre>
         </div>
+    )
+}
+
+export function warningIntel({
+    message
+}) {
+    return (
+        <span className='warning-button' title={message}>
+            <WarningIcon/>
+        </span>
     )
 }
 
@@ -305,7 +316,14 @@ export default function SwaggerResponse({
                                 />
                             </td>
                             <td className='description'>
+                                <p>
                                 {description}
+                                    {
+                                        warning_message !== undefined ? warningIntel({
+                                            message: warning_message
+                                        }) : ""
+                                    }
+                                </p>
                             </td>
                         </tr>
                     </tbody>

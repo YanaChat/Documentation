@@ -180,7 +180,7 @@ export default function SwaggerOrganizations() {
                 ]}
                 responses={[
                     {
-                        status_code: 4,
+                        status_code: 204,
                         description: "Organization deleted"
                     },
                     {

@@ -198,6 +198,10 @@ html[data-theme='light'] .swagger-response .swagger-response-summary {
     font-weight: lighter;
 }
 
+.swagger-response .swagger-response-summary table td.description p {
+    display: flex;
+}
+
 .swagger-response.no-content {
     pointer-events: none;
 }
@@ -280,4 +284,11 @@ table tbody td.name {
 
 table tbody td.type {
     width: 13.57%;
+}
+
+.warning-button {
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
 }
