@@ -50,7 +50,7 @@ export default function SwaggerAuth() {
                     },
                     {
                         status_code: 400,
-                        description: "Missing 1 or more credentials",
+                        description: "Missing 1 or more credentials OR credentials not well write",
                     },
                     {
                         status_code: 403,
