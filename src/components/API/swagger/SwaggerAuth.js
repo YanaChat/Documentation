@@ -161,7 +161,7 @@ export default function SwaggerAuth() {
                 pathDescription='Check email before register'
                 responses={[
                     {
-                        status_code: 204,
+                        status_code: 202,
                         description: "Email sent",
                     },
                     {
