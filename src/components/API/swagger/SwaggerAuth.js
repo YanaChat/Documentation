@@ -204,7 +204,7 @@ export default function SwaggerAuth() {
             <SwaggerCall
                 pathUrl="/forgot-password"
                 mainUrl="/auth"
-                callType='GET'
+                callType='PATCH'
                 pathDescription="Password forget"
                 parameter_body={[
                     {
