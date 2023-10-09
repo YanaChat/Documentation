@@ -22,7 +22,7 @@ export default function SwaggerUsers() {
                 parameter_path={[
                     {
                         name: "id",
-                        description: "User's id",
+                        description: "User's id (set @me to get your user)",
                         type: "String",
                         required: true
                     }
@@ -49,13 +49,21 @@ export default function SwaggerUsers() {
                     }
                 ]}
             />
-            <SwaggerCall callType='PATCH' pathUrl=""
+            <SwaggerCall callType='PATCH' pathUrl="/{id}"
                 mainUrl="/users"
                 pathDescription='Edit user information'
                 parameter_header={[
                     {
                         name: "Bearer",
                         description: "session token",
+                        type: "String",
+                        required: true
+                    }
+                ]}
+                parameter_path={[
+                    {
+                        name: "id",
+                        description: "User's id (set @me to get your user)",
                         type: "String",
                         required: true
                     }
@@ -91,13 +99,21 @@ export default function SwaggerUsers() {
                     }
                 ]}
             />
-            <SwaggerCall callType='GET' pathUrl="/organizations"
+            <SwaggerCall callType='GET' pathUrl="/{id}/organizations"
                 mainUrl="/users"
                 pathDescription="Get user's organizations"
                 parameter_header={[
                     {
                         name: "Bearer",
                         description: "session token",
+                        type: "String",
+                        required: true
+                    }
+                ]}
+                parameter_path={[
+                    {
+                        name: "id",
+                        description: "User's id (set @me to get your user)",
                         type: "String",
                         required: true
                     }
@@ -122,7 +138,7 @@ export default function SwaggerUsers() {
                     }
                 ]}
             />
-            <SwaggerCall callType='DELETE' pathUrl="/organizations/{organization.id}"
+            <SwaggerCall callType='DELETE' pathUrl="/{id}/organizations/{organization.id}"
                 mainUrl="/users"
                 pathDescription='Delete link between user and organization'
                 parameter_header={[
@@ -134,6 +150,12 @@ export default function SwaggerUsers() {
                     }
                 ]}
                 parameter_path={[
+                    {
+                        name: "id",
+                        description: "User's id (set @me to get your user)",
+                        type: "String",
+                        required: true
+                    },
                     {
                         name: "organization.id",
                         description: "ID organization targeted",
@@ -152,12 +174,20 @@ export default function SwaggerUsers() {
                     }
                 ]}
             />
-            <SwaggerCall callType='PATCH' pathUrl="/edit-password"
+            <SwaggerCall callType='PATCH' pathUrl="/{id}/edit-password"
                 mainUrl="/users"
                 parameter_header={[
                     {
                         name: "Bearer",
                         description: "session token",
+                        type: "String",
+                        required: true
+                    }
+                ]}
+                parameter_path={[
+                    {
+                        name: "id",
+                        description: "User's id (set @me to get your user)",
                         type: "String",
                         required: true
                     }
@@ -202,12 +232,20 @@ export default function SwaggerUsers() {
                     }
                 ]}
             />
-            <SwaggerCall callType='POST' pathUrl="/confirm-password"
+            <SwaggerCall callType='POST' pathUrl="/{id}/confirm-password"
                 mainUrl="/users"
                 parameter_header={[
                     {
                         name: "Bearer",
                         description: "session token",
+                        type: "String",
+                        required: true
+                    }
+                ]}
+                parameter_path={[
+                    {
+                        name: "id",
+                        description: "User's id (set @me to get your user)",
                         type: "String",
                         required: true
                     }
@@ -239,12 +277,20 @@ export default function SwaggerUsers() {
                     }
                 ]}
             />
-            <SwaggerCall callType='PATCH' pathUrl="/enable-mfa"
+            <SwaggerCall callType='PATCH' pathUrl="/{id}/enable-mfa"
                 mainUrl="/users"
                 parameter_header={[
                     {
                         name: "Bearer",
                         description: "session token",
+                        type: "String",
+                        required: true
+                    }
+                ]}
+                parameter_path={[
+                    {
+                        name: "id",
+                        description: "User's id (set @me to get your user)",
                         type: "String",
                         required: true
                     }
@@ -268,13 +314,21 @@ export default function SwaggerUsers() {
                     }
                 ]}
             />
-            <SwaggerCall callType='POST' pathUrl="/confirm-mfa"
+            <SwaggerCall callType='POST' pathUrl="/{id}/confirm-mfa"
                 mainUrl="/users"
                 pathDescription='Confirm double authentication enabling'
                 parameter_header={[
                     {
                         name: "Bearer",
                         description: "session token",
+                        type: "String",
+                        required: true
+                    }
+                ]}
+                parameter_path={[
+                    {
+                        name: "id",
+                        description: "User's id (set @me to get your user)",
                         type: "String",
                         required: true
                     }
