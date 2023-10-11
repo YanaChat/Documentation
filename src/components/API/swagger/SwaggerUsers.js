@@ -194,20 +194,14 @@ export default function SwaggerUsers() {
                 ]}
                 parameter_body={[
                     {
-                        name: "last-password",
-                        description: "Last user's password",
+                        name: "password",
+                        description: "Last user password",
                         type: "String",
                         required: true
                     },
                     {
                         name: "new-password",
                         description: "New user's password",
-                        type: "String",
-                        required: true
-                    },
-                    {
-                        name: "confirm-password",
-                        description: "Confirm new user's password",
                         type: "String",
                         required: true
                     }
